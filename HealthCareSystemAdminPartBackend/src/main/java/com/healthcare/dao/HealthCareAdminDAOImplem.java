@@ -101,7 +101,6 @@ public class HealthCareAdminDAOImplem implements HealthCareAdminDAO
 	@Override
 	public String approveAppointment(Appointment appointment)
 	{
-//		appointment.setApproved(true);
 		entityManager.merge(appointment);
 		System.out.println(appointment.getAppointmentId()+" "+appointment.getUser().getUserName()+" "+appointment.getCenter().getCenterName()+" "+appointment.getTest().getTestName()+appointment.isApproved());
 		return "appointment approved";

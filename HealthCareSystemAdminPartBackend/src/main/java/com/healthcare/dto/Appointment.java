@@ -21,9 +21,6 @@ public class Appointment
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int  appointmentId ;
 	
-//	@Column
-//	private LocalDateTime datetime;
-	
 	@OneToOne(fetch = FetchType.LAZY, optional = false)
 	@JoinColumn(name="user_id",nullable=false)
 	private User user;
